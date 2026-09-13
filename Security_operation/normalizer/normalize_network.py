@@ -1,4 +1,3 @@
-cat > normalizer/normalize_network.py <<'PY'
 from __future__ import annotations
 
 from typing import Any
@@ -25,4 +24,3 @@ def normalize_network(data: dict[str, Any]) -> NetworkConnectionEvent:
             "metadata": data.get("metadata", {}),
         }
     )
-PY
