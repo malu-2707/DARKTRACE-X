@@ -1,4 +1,3 @@
-cat > normalizer/normalize_alert.py <<'PY'
 from __future__ import annotations
 
 from typing import Any
@@ -28,4 +27,3 @@ def normalize_alert(data: dict[str, Any]) -> SOCAlert:
             "metadata": data.get("metadata", {}),
         }
     )
-PY
