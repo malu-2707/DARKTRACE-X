@@ -1,0 +1,72 @@
+%YAML 1.1
+---
+
+vars:
+  address-groups:
+    HOME_NET: "[192.168.56.0/24]"
+    EXTERNAL_NET: "!$HOME_NET"
+
+  port-groups:
+    HTTP_PORTS: "80"
+    SSH_PORTS: "22"
+
+default-rule-path: suricata/rules 
+
+rule-files:
+  - local.rules
+  - ssh.rules
+  - web.rules
+  - scan.rules
+
+classification-file: /etc/suricata/classification.config
+reference-config-file: /etc/suricata/reference.config
+
+outputs:
+  - eve-log:
+      enabled: yes
+      filetype: regular
+      filename: suricata/logs/eve.json
+      community-id: true
+      types:
+        - alert
+        - dns
+        - http
+        - flow
+        - ssh
+        - stats
+
+  - fast:
+      enabled: yes
+      filename: suricata/logs/fast.log
+
+logging:
+  default-log-level: notice
+
+af-packet:
+  - interface: eth0
+    cluster-id: 99
+    cluster-type: cluster_flow
+    defrag: yes
+
+app-layer:
+  protocols:
+    http:
+      enabled: yes
+    ssh:
+      enabled: yes
+
+stats:
+  enabled: yes
+  interval: 8
+
+detect-engine:
+  - profile: medium
+
+stream:
+  checksum-validation: auto
+
+flow:
+  memcap: 64mb
+
+host-mode:
+  use-all-addresses: true

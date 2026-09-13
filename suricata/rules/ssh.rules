@@ -1,0 +1,5 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"SOC SSH Multiple Authentication Attempts"; flow:to_server; flags:S; detection_filter:track by_src,count 5,seconds 60; classtype:attempted-admin; sid:1001001; rev:1;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"SOC SSH Connection Attempt"; flow:to_server; flags:S; classtype:attempted-admin; sid:1001002; rev:1;)
+
+alert tcp $HOME_NET 22 -> $EXTERNAL_NET any (msg:"SOC SSH Outbound Connection"; flow:from_server; flags:S; classtype:policy-violation; sid:1001003; rev:1;)

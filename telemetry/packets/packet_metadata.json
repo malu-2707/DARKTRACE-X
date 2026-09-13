@@ -1,0 +1,42 @@
+{
+  "packets": [
+    {
+      "packet_id": "PKT-001",
+      "timestamp": "2026-09-12T17:07:00",
+      "source_ip": "192.168.56.10",
+      "destination_ip": "192.168.56.20",
+      "source_port": 49152,
+      "destination_port": 4444,
+      "protocol": "TCP",
+      "flags": [
+        "ACK",
+        "PSH"
+      ],
+      "packet_length": 512,
+      "metadata": {
+        "direction": "OUTBOUND",
+        "process_name": "suspicious_demo_process",
+        "session_id": "NET-SESSION-001"
+      }
+    },
+    {
+      "packet_id": "PKT-002",
+      "timestamp": "2026-09-12T17:07:05",
+      "source_ip": "192.168.56.10",
+      "destination_ip": "192.168.56.20",
+      "source_port": 49152,
+      "destination_port": 4444,
+      "protocol": "TCP",
+      "flags": [
+        "ACK",
+        "PSH"
+      ],
+      "packet_length": 1024,
+      "metadata": {
+        "direction": "OUTBOUND",
+        "process_name": "suspicious_demo_process",
+        "session_id": "NET-SESSION-001"
+      }
+    }
+  ]
+}

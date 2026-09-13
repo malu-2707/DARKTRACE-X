@@ -1,0 +1,49 @@
+{
+  "indicators": [
+    {
+      "indicator_id": "IOC-SIM-001",
+      "indicator_type": "IP",
+      "value": "192.168.56.20",
+      "threat_type": "LAB_ATTACKER",
+      "confidence": "HIGH",
+      "severity": "HIGH",
+      "status": "ACTIVE",
+      "description": "Simulated attacker IP used for controlled SOC attack scenarios.",
+      "tags": [
+        "lab",
+        "attacker",
+        "ssh"
+      ]
+    },
+    {
+      "indicator_id": "IOC-SIM-002",
+      "indicator_type": "IP",
+      "value": "192.168.56.30",
+      "threat_type": "INTERNAL_TARGET",
+      "confidence": "MEDIUM",
+      "severity": "MEDIUM",
+      "status": "ACTIVE",
+      "description": "Simulated internal target used for controlled investigation scenarios.",
+      "tags": [
+        "lab",
+        "internal",
+        "target"
+      ]
+    },
+    {
+      "indicator_id": "IOC-SIM-003",
+      "indicator_type": "PROCESS",
+      "value": "suspicious_demo_process",
+      "threat_type": "SUSPICIOUS_PROCESS",
+      "confidence": "HIGH",
+      "severity": "HIGH",
+      "status": "ACTIVE",
+      "description": "Synthetic process indicator used to represent post-compromise activity.",
+      "tags": [
+        "lab",
+        "process",
+        "post-compromise"
+      ]
+    }
+  ]
+}

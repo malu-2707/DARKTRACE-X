@@ -1,0 +1,52 @@
+{
+  "vulnerabilities": [
+    {
+      "vulnerability_id": "VULN-SIM-001",
+      "asset_id": "SRV-001",
+      "cve": "CVE-SIM-SSH-001",
+      "title": "Simulated SSH Service Weakness",
+      "service": "SSH",
+      "port": 22,
+      "severity": "HIGH",
+      "status": "VULNERABLE",
+      "description": "Simulated vulnerability used for controlled SOC investigation scenarios.",
+      "tags": [
+        "ssh",
+        "remote-service",
+        "simulated"
+      ]
+    },
+    {
+      "vulnerability_id": "VULN-SIM-002",
+      "asset_id": "SRV-001",
+      "cve": "CVE-SIM-WEB-001",
+      "title": "Simulated Web Service Weakness",
+      "service": "HTTP",
+      "port": 80,
+      "severity": "MEDIUM",
+      "status": "VULNERABLE",
+      "description": "Simulated web-service vulnerability used for controlled web attack scenarios.",
+      "tags": [
+        "http",
+        "web",
+        "simulated"
+      ]
+    },
+    {
+      "vulnerability_id": "VULN-SIM-003",
+      "asset_id": "SRV-002",
+      "cve": "CVE-SIM-SSH-002",
+      "title": "Simulated Internal SSH Weakness",
+      "service": "SSH",
+      "port": 22,
+      "severity": "MEDIUM",
+      "status": "VULNERABLE",
+      "description": "Simulated internal SSH vulnerability used for investigation and correlation testing.",
+      "tags": [
+        "ssh",
+        "internal",
+        "simulated"
+      ]
+    }
+  ]
+}
