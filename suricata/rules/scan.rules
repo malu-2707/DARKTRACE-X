@@ -1,5 +1,0 @@
-alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"SOC TCP SYN Port Scan Detected"; flags:S; detection_filter:track by_src,count 10,seconds 10; classtype:network-scan; sid:1003001; rev:1;)
-
-alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"SOC SSH Port Scan Activity"; flags:S; detection_filter:track by_src,count 5,seconds 10; classtype:network-scan; sid:1003002; rev:1;)
-
-alert tcp $EXTERNAL_NET any -> $HOME_NET 80 (msg:"SOC Web Port Scan Activity"; flags:S; detection_filter:track by_src,count 5,seconds 10; classtype:network-scan; sid:1003003; rev:1;)

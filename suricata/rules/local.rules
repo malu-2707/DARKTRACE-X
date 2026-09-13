@@ -1,7 +1,0 @@
-alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"SOC SSH Brute Force Scenario"; flow:to_server; flags:S; detection_filter:track by_src,count 5,seconds 60; classtype:attempted-admin; sid:1000001; rev:1;)
-
-alert tcp $EXTERNAL_NET any -> $HOME_NET 80 (msg:"SOC Web Attack Scenario"; flow:to_server,established; http.uri; content:"/admin"; sid:1000002; rev:1;)
-
-alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"SOC Suspicious Outbound Connection"; flow:from_client,established; detection_filter:track by_src,count 1,seconds 60; classtype:trojan-activity; sid:1000003; rev:1;)
-
-alert tcp $HOME_NET any -> $EXTERNAL_NET 4444 (msg:"SOC Possible Command Channel"; flow:to_server,established; sid:1000004; rev:1;)

@@ -1,5 +1,0 @@
-alert http $EXTERNAL_NET any -> $HOME_NET 80 (msg:"SOC Web Login Failure"; flow:to_server,established; http.method; content:"POST"; http.uri; content:"/login"; sid:1002001; rev:1;)
-
-alert http $EXTERNAL_NET any -> $HOME_NET 80 (msg:"SOC Web Admin Access Attempt"; flow:to_server,established; http.method; content:"GET"; http.uri; content:"/admin"; sid:1002002; rev:1;)
-
-alert http $EXTERNAL_NET any -> $HOME_NET 80 (msg:"SOC Web Suspicious Path Probe"; flow:to_server,established; http.uri; content:"../"; sid:1002003; rev:1;)
