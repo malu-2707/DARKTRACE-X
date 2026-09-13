@@ -1,4 +1,3 @@
-cat > replay/replay_engine.py <<'PY'
 from __future__ import annotations
 
 import json
@@ -34,4 +33,3 @@ if __name__ == "__main__":
 
     for event in engine.replay():
         print(json.dumps(event, indent=2))
-PY
