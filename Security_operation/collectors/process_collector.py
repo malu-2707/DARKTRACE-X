@@ -1,4 +1,3 @@
-cat > collectors/process_collector.py <<'PY'
 from __future__ import annotations
 
 from datetime import datetime
@@ -38,4 +37,3 @@ if __name__ == "__main__":
     )
 
     print(event.model_dump_json(indent=2))
-PY
