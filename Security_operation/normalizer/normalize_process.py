@@ -1,4 +1,3 @@
-cat > normalizer/normalize_process.py <<'PY'
 from __future__ import annotations
 
 from typing import Any
@@ -27,4 +26,3 @@ def normalize_process(data: dict[str, Any]) -> ProcessEvent:
             "metadata": data.get("metadata", {}),
         }
     )
-PY
