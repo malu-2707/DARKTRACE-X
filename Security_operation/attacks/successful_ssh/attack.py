@@ -1,8 +1,5 @@
 from __future__ import annotations
-
 from datetime import datetime
-
-
 def simulate_successful_ssh(
     source_ip: str = "192.168.56.20",
     target_ip: str = "192.168.56.10",
