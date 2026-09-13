@@ -1,4 +1,3 @@
-cat > normalizer/normalize_auth.py <<'PY'
 from __future__ import annotations
 
 from typing import Any
@@ -27,4 +26,3 @@ def normalize_auth(data: dict[str, Any]) -> AuthenticationEvent:
             "metadata": data.get("metadata", {}),
         }
     )
-PY
