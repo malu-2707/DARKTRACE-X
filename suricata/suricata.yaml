@@ -25,7 +25,7 @@ outputs:
   - eve-log:
       enabled: yes
       filetype: regular
-      filename: suricata/logs/eve.json
+      filename: eve.json
       community-id: true
       types:
         - alert
@@ -37,7 +37,7 @@ outputs:
 
   - fast:
       enabled: yes
-      filename: suricata/logs/fast.log
+      filename: fast.log
 
 logging:
   default-log-level: notice
